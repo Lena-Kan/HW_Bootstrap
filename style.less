@@ -1,11 +1,46 @@
-dody {
-margin: 0;
+body {
+    margin: 0;
 }
 
 header {
-    background-color:cadetblue;
+    background-color: cadetblue;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
+
+    .nav_left,
+    .nav_right {
+        display: flex;
+        align-items: center;
+    }
+
+    span {
+        display: inline-block;
+        margin: 15px;
+        cursor: pointer;
+
+    }
+
+    .nav_left {
+        span {
+
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+                color: white;
+            }
+
+            &:nth-of-type(n+3) {
+                color: rgb(184, 191, 201);
+            }
+        }
+    }
+    .nav_right {
+        &:nth-child(n) {
+            color: rgb(184, 191, 201);
+        }
+    }
+       
+    
 }
