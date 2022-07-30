@@ -1,5 +1,16 @@
+html,
 body {
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
     margin: 0;
+}
+
+.wraper {
+    width: 90%;
 }
 
 header {
@@ -20,12 +31,10 @@ nav {
         display: inline-block;
         margin: 15px;
         cursor: pointer;
-
     }
 
     .nav_left {
         span {
-
             &:nth-of-type(1),
             &:nth-of-type(2) {
                 color: white;
@@ -36,11 +45,112 @@ nav {
             }
         }
     }
+
     .nav_right {
         &:nth-child(n) {
             color: rgb(184, 191, 201);
         }
     }
-       
-    
+}
+
+.date {
+    text-align: center;
+    margin: 20px;
+}
+
+.lessons {
+    margin: 20px 0;
+}
+
+.current-lesson__head td:nth-child(1),
+.current-lesson__head td:nth-child(2) {
+    color: rgb(196, 195, 195);
+    font-size: 12px;
+    width: 180px;
+}
+
+.current-lesson__head td:nth-child(3),
+td:nth-child(4) {
+    color: rgb(196, 195, 195);
+    font-size: 12px;
+    width: 300px;
+}
+
+.current-lesson__choice td input {
+    width: 250px;
+    border: 1px solid rgb(196, 195, 195);
+    border-radius: 3px;
+}
+
+.current-lesson__choice td button {
+    color: white;
+    background-color: cadetblue;
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
+}
+
+.group-list {
+    width: 100%;
+     text-align: center;
+     box-sizing: border-box;
+     margin: 25px 0;
+}
+
+.group-list thead {
+    height: 35px;
+    background-color: rgb(126, 206, 209);
+}
+
+.input (@appearance:none, @width:15px, @height:15px, @height:50%, @cursor:pointer) {
+    -webkit-appearance:@appearance;
+    width:@width;
+    height:@height;
+    border-radius: @height;
+    cursor: @cursor;
+}
+
+tbody td {
+    padding: 10px;
+
+    input[type='radio']:first-child {
+        border: 1px solid green;
+        .input
+    }
+
+    input[type='radio']:first-child:checked {
+        background-color: green;
+        
+    }
+
+    input[type='radio']:nth-of-type(2) {
+        border: 1px solid orange;
+        .input
+    }
+
+    input[type='radio']:nth-of-type(2):checked {
+        background-color: orange;
+    }
+
+    input[type='radio']:last-child {
+        border: 1px solid red;
+        .input
+    }
+
+    input[type='radio']:last-child:checked {
+        background-color: red;
+        
+    }
+
+    select {
+    width: 50%;
+    border-radius: 3px;
+    border: 1px solid rgb(196, 195, 195);
+}
+    textarea {
+        width: 80%;
+        border-radius: 3px;
+        border: 1px solid rgb(196, 195, 195);
+        vertical-align: middle;
+}
 }
