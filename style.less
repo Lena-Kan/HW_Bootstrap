@@ -1,3 +1,8 @@
+.form (@width:350px, @border:1px solid gray,@border-radius:3px) {
+    width: @width;
+    border: @border;
+    border-radius: @border-radius;
+}
 html,
 body {
     width: 100%;
@@ -76,18 +81,50 @@ td:nth-child(4) {
     width: 300px;
 }
 
-.current-lesson__choice td input {
+.current-lesson__choice__topic {
     width: 250px;
     border: 1px solid rgb(196, 195, 195);
     border-radius: 3px;
 }
 
-.current-lesson__choice td button {
+.current-lesson__choice td .add {
     color: white;
     background-color: cadetblue;
     border-radius: 3px;
     border: none;
     padding: 5px;
+}
+
+h5 {
+    color: black;
+}
+
+.close {
+    background-color: none;
+}
+
+.title {
+    .form;
+    margin: 5px;
+    padding: 5px;
+}
+
+.form-browse {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    .form;
+}
+
+.title-file, .btn-file {
+    border: none;
+    padding: 5px;
+}
+
+.title-file {
+    width: 86%;
 }
 
 .group-list {

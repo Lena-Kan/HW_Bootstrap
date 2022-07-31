@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet/less" href="style.less">
@@ -76,10 +76,39 @@
             <tr class="current-lesson__choice">
                 <td>ABC-1234</td>
                 <td>HTML & CSS</td>
-                <td><input type="text"></td>
-                <td><button>Add homework</button></td>
+                <td><input class="current-lesson__choice__topic" type="text"></td>
+                <td><button class="add" data-bs-toggle="modal" data-bs-target="#add-HW">Add homework</button>
+                    <div class="modal fade" id="add-HW" tabindex="-1" aria-labelledby="add-HWLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="add-HWLabel">New homework</h5>
+                                    <button type="button" class=" close btn-close" data-bs-dismiss="modal"
+                                        aria-label="Закрыть"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <label>Topic: <br>
+                                            <input class="title" type="text">
+                                        </label>
+                                        <div class="form-browse">
+                                        <input class="title-file" type="text" placeholder="Choose file...">
+                                        <button class="btn-file">Browse</button>
+                                    </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
             </tr>
         </table>
+
         <table class="group-list">
             <thead>
                 <tr class="caption">
@@ -110,7 +139,7 @@
                     <td>
                         <select name="" id="">
                             <option value="">-</option>
-                        </select> 
+                        </select>
                     </td>
                     <td>
                         <textarea name="" id="" cols="25" rows="1"></textarea>
@@ -133,7 +162,7 @@
                     <td>
                         <select name="" id="">
                             <option value="">-</option>
-                        </select> 
+                        </select>
                     </td>
                     <td>
                         <textarea name="" id="" cols="25" rows="1"></textarea>
@@ -156,7 +185,7 @@
                     <td>
                         <select name="" id="">
                             <option value="">-</option>
-                        </select> 
+                        </select>
                     </td>
                     <td>
                         <textarea name="" id="" cols="25" rows="1"></textarea>
@@ -179,7 +208,7 @@
                     <td>
                         <select name="" id="">
                             <option value="">-</option>
-                        </select> 
+                        </select>
                     </td>
                     <td>
                         <textarea name="" id="" cols="25" rows="1"></textarea>
@@ -188,6 +217,9 @@
             </tbody>
         </table>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
